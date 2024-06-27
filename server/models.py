@@ -10,7 +10,7 @@ db = SQLAlchemy(metadata=metadata)
 class Earthquake(db.Model,SerializerMixin):
     __tablename__='earthquakes'
 
-    id=db.Column(db.String,primary_key=True)
+    id=db.Column(db.Integer,primary_key=True,autoincrement=True)
     magnitude=db.Column(db.Float,nullable=False)
     location=db.Column(db.String,nullable=False)
     year=db.Column(db.Integer,nullable=False)
